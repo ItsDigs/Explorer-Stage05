@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root{
+    --bg-color: white;
+    font-size: 62.5%;
+    --btn-bgcolor: #E1E1E6;
+    --btn-hoverBgcolor: #77acbc;
+    --btn-activeBgColor: #02799D;
+
+}
+
+button {
+    background-color: transparent;
+    border: none;
+  
+    cursor: pointer;
+}
+
+body{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: var(--bg-color);
+    gap: clamp(.5rem, 1rem + 10vw, 19.2rem);
+}
+
+.clock{
+    display: flex;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12.6rem;
+    line-height: 14.8rem;
+    margin-bottom: 1.7rem;
+    margin-top: -12rem;
+}
+
+.hide{
+    display: none;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+
+.pause svg{
+    height: 6rem;
+    width: 6rem;
+}
+
+.sounds{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.2rem;
+    margin-top: -10rem;
+}
+
+.sounds div{
+    width: 138px;
+    height: 152px;
+    background-color: var(--btn-bgcolor);
+    border-radius: 24px;
+    text-align: center;
+    transition: background 500ms;
+}
+
+.sounds .active{
+    background-color: var(--btn-activeBgColor);
+}
+
+.active svg path{
+    fill:white;
+}
+
+.sounds div:hover{
+    background-color: var(--btn-hoverBgcolor);
+    cursor: pointer;
+}
+
+.sounds div svg{
+    display: block;
+    margin: auto;
+    height: 100%;
+}
