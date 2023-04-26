@@ -1,3 +1,4 @@
+
 export default function({
     btnCloud,
     btnFire,
@@ -8,11 +9,9 @@ export default function({
     btnPlus,
     btnStop,
     btnStore,
-    audioButtons,
     timer,
+    sounds
 }){
-
-
 //Events
 btnPlay.addEventListener('click', () => {
     btnPlay.classList.add('hide')
@@ -33,19 +32,20 @@ btnStop.addEventListener('click', () => {
 
 
 btnForest.addEventListener('click', () => {
-    audioButtons(btnForest, forestAudio)
+    sounds.audioButtons(btnForest, sounds.forestAudio)
 })
 
 
 btnCloud.addEventListener('click', () => {
-    audioButtons(btnCloud, cloudAudio)
+    sounds.audioButtons(btnCloud, sounds.cloudAudio)
 })
 
 btnStore.addEventListener('click', () => {
-    audioButtons(btnStore, storeAudio)
+    sounds.audioButtons(btnStore, sounds.storeAudio)
 })
 
 btnFire.addEventListener('click', () => {
-    audioButtons(btnFire, fireAudio)
+    sounds.audioButtons(btnFire, sounds.fireAudio)
 })
+
 }

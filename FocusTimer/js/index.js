@@ -24,6 +24,7 @@ const timer = Timer({
     btnPlay
 })
 
+const sounds = Sounds()
 
 Events({
     btnCloud,
@@ -35,8 +36,8 @@ Events({
     btnPlus,
     btnStop,
     btnStore,
-    audioButtons: Sounds.audioButtons,
     timer,
+    sounds
 })
 
 btnPlus.addEventListener('click', () => {

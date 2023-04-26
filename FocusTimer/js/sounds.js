@@ -18,5 +18,11 @@ function audioButtons (button, audio){
     }
     button.classList.toggle('active')
 }
-return audioButtons
+return {
+audioButtons,
+forestAudio,
+cloudAudio,
+storeAudio,
+fireAudio,
+}
 }
