@@ -17,37 +17,26 @@ const btnCloud = document.querySelector('.cloud')
 const btnStore = document.querySelector('.store')
 const btnFire = document.querySelector('.fire')
 
+const sounds = Sounds()
+
 const timer = Timer({
     minutesDisplay,
     secondsDisplay,
     btnPause, 
-    btnPlay
+    btnPlay,
+    btnMinus,
+    btnPlus,
+    kitchenTimer: sounds.kitchenTimer
 })
-
-const sounds = Sounds()
 
 Events({
     btnCloud,
     btnFire,
     btnForest,
-    btnMinus,
     btnPause,
     btnPlay,
-    btnPlus,
     btnStop,
     btnStore,
     timer,
     sounds
-})
-
-btnPlus.addEventListener('click', () => {
-    timer.minutes += 5
-    timer.updateDisplay(String(minutes),)
-})
-
-btnMinus.addEventListener('click', () => {
-    timer.minutes -= 5
-    if (minutes <= 0){minutes = 0}
-    timer.updateDisplay(String(minutes),)
-    
 })

@@ -1,3 +1,4 @@
+
 export default function() {
 
 const forestAudio = new Audio('https://github.com/ItsDigs/Explorer-Stage05/blob/main/FocusTimer/sounds/Floresta.wav?raw=true')
@@ -24,5 +25,6 @@ forestAudio,
 cloudAudio,
 storeAudio,
 fireAudio,
+kitchenTimer
 }
 }

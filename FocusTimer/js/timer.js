@@ -1,6 +1,6 @@
-export default function timer({minutesDisplay, secondsDisplay, btnPause, btnPlay}){
+export default function timer({minutesDisplay, secondsDisplay, btnPause, btnPlay, btnPlus, btnMinus, kitchenTimer}){
 
-    let startingMinutes = prompt('Minutes?')
+    let startingMinutes = Number(prompt('Minutes?'))
     let minutes
 
     if (isNaN(startingMinutes) || startingMinutes == 0){
@@ -33,7 +33,7 @@ export default function timer({minutesDisplay, secondsDisplay, btnPause, btnPlay
             }
     
             if (seconds <= 0){
-                seconds = 60
+                seconds = 6
                 --minutes
             }
     
@@ -59,6 +59,19 @@ export default function timer({minutesDisplay, secondsDisplay, btnPause, btnPlay
         minutesDisplay.textContent = String(startingMinutes)
         secondsDisplay.textContent = '00'
     }
+
+    btnPlus.addEventListener('click', () => {
+        console.log(typeof(minutes))
+        minutes += 5
+        updateDisplay(String(minutes),)
+    })
+    
+    btnMinus.addEventListener('click', () => {
+        minutes -= 5
+        if (minutes <= 0){minutes = 0}
+        updateDisplay(String(minutes),)
+        
+    })
     
     return{
         updateDisplay,

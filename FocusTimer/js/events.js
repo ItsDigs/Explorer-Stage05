@@ -3,10 +3,8 @@ export default function({
     btnCloud,
     btnFire,
     btnForest,
-    btnMinus,
     btnPause,
     btnPlay,
-    btnPlus,
     btnStop,
     btnStore,
     timer,
@@ -27,9 +25,6 @@ btnPause.addEventListener('click', () => {
 btnStop.addEventListener('click', () => {
     timer.resetTimer()
 })
-
-
-
 
 btnForest.addEventListener('click', () => {
     sounds.audioButtons(btnForest, sounds.forestAudio)
