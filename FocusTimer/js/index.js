@@ -11,11 +11,18 @@ const btnPause = document.querySelector('.pause')
 const btnStop = document.querySelector('.stop')
 const btnPlus = document.querySelector('.plus')
 const btnMinus = document.querySelector('.minus')
+const btnSun = document.querySelector('#sun')
+const btnMoon = document.querySelector('#moon')
+const root = document.querySelector(':root')
 
 const btnForest = document.querySelector('.forest')
 const btnCloud = document.querySelector('.cloud')
 const btnStore = document.querySelector('.store')
 const btnFire = document.querySelector('.fire')
+const sliForest = document.querySelector('.forest .slider')
+const sliCloud = document.querySelector('.cloud .slider')
+const sliStore = document.querySelector('.store .slider')
+const sliFire = document.querySelector('.fire .slider')
 
 const sounds = Sounds()
 
@@ -37,6 +44,13 @@ Events({
     btnPlay,
     btnStop,
     btnStore,
+    sliCloud,
+    sliFire,
+    sliForest,
+    sliStore,
+    btnSun,
+    btnMoon,
+    root,
     timer,
     sounds
 })

@@ -33,7 +33,7 @@ export default function timer({minutesDisplay, secondsDisplay, btnPause, btnPlay
             }
     
             if (seconds <= 0){
-                seconds = 6
+                seconds = 60
                 --minutes
             }
     

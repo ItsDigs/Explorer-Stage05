@@ -11,7 +11,19 @@
     --btn-bgcolor: #E1E1E6;
     --btn-hoverBgcolor: #77acbc;
     --btn-activeBgColor: #02799D;
+    --txt-color: black;
+    --svg-fill: black;
+    --sli-color: black;
+}
 
+.nightmode{
+    position: absolute;
+    right: 6.4rem;
+    top: 6.4rem;
+}
+
+.nightmode:hover{
+    cursor: pointer;
 }
 
 button {
@@ -30,6 +42,7 @@ body{
     min-width: 100vw;
     background-color: var(--bg-color);
     gap: clamp(.5rem, 1rem + 10vw, 19.2rem);
+    color: var(--txt-color);
 }
 
 .clock{
@@ -53,6 +66,10 @@ body{
     gap: 4rem;
 }
 
+.buttons svg path{
+    fill:var(--svg-fill);
+}
+
 .pause svg{
     height: 6rem;
     width: 6rem;
@@ -66,11 +83,15 @@ body{
 }
 
 .sounds div{
+    display: flex;
+    flex-direction: column;
+    gap: 0;
     width: 138px;
     height: 152px;
     background-color: var(--btn-bgcolor);
     border-radius: 24px;
     text-align: center;
+    align-items: center;
     transition: background 500ms;
 }
 
@@ -78,7 +99,11 @@ body{
     background-color: var(--btn-activeBgColor);
 }
 
-.active svg path{
+.sounds svg path{
+    fill:var(--svg-fill);
+}
+
+.sounds .active svg path{
     fill:white;
 }
 
@@ -88,7 +113,23 @@ body{
 }
 
 .sounds div svg{
-    display: block;
-    margin: auto;
-    height: 100%;
+    margin: 2.4rem auto 3rem;
+}
+
+.slider {
+    -webkit-appearance: none;
+    height: .6rem;
+    border-radius: 5px;  
+    width: 9rem;
+    background: var(--sli-color);
+}
+  
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.6rem;
+    height: 1.6rem;
+    border-radius: 50%; 
+    background: var(--sli-color);
+    cursor: pointer;
 }

@@ -19,8 +19,15 @@ function audioButtons (button, audio){
     }
     button.classList.toggle('active')
 }
+
+function soundControl(slider, audio){
+    audio.volume = slider.value/100
+
+}
+
 return {
 audioButtons,
+soundControl,
 forestAudio,
 cloudAudio,
 storeAudio,
